@@ -9,7 +9,7 @@ def get_frame(cap):
         if retval:
             return image
 
-cap = cv.VideoCapture('/home/ziggyjosh16/Projects/git/app-fall-detector/videos/commuters.mp4')
+cap = cv.VideoCapture('/home/ziggyjosh16/Projects/git/app-fall-detector/videos/FireHouse.mp4')
 sleep(2)
 
 hog = cv.HOGDescriptor()
