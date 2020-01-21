@@ -1,30 +1,65 @@
 import cv2 as cv
 import numpy as np
 import os
-from imutils.object_detection import non_max_suppression
+import tensorflow as tf
+import numpy as np
+from PIL import Image
 
-for img in os.scandir('group_photo'):
-	image = cv.imread(img.path)
-	supimage = image.copy()
+parts = {
+	0: 'NOSE',
+	1: 'LEFT_EYE',
+  	2: 'RIGHT_EYE',
+  	3: 'LEFT_EAR',
+  	4: 'RIGHT_EAR',
+  	5: 'LEFT_SHOULDER',
+  	6: 'RIGHT_SHOULDER',
+  	7: 'LEFT_ELBOW',
+  	8: 'RIGHT_ELBOW',
+  	9: 'LEFT_WRIST',
+  	10: 'RIGHT_WRIST',
+  	11: 'LEFT_HIP',
+  	12: 'RIGHT_HIP',
+  	13: 'LEFT_KNEE',
+  	14: 'RIGHT_KNEE',
+  	15: 'LEFT_ANKLE',
+  	16: 'RIGHT_ANKLE'
+}
 
-	face_cascade = cv.CascadeClassifier('haarcascade_frontalface_default.xml')
-	hog = cv.HOGDescriptor()
-	hog.setSVMDetector(cv.HOGDescriptor_getDefaultPeopleDetector())
-	# gray = cv.cvtColor(image, cv.COLOR_BGR2GRAY)
+img = cv.imread('photos\standing\\3.jpg')
+img = tf.reshape(tf.image.resize(img, [257,257]), [1,257,257,3])
+model = tf.lite.Interpreter('models\posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite')
+model.allocate_tensors()
+input_details = model.get_input_details()
+output_details = model.get_output_details()
 
-	bodies, weights = hog.detectMultiScale(image, winStride=(4,4), padding=(6,6), scale=1.05)
-	supbodies = np.array([[x, y, x + w, y + h] for (x, y, w, h) in bodies])
-	supbodies = non_max_suppression(supbodies, overlapThresh=0.65)
+floating_model = input_details[0]['dtype'] == np.float32
+
+if floating_model:
+	img = (np.float32(img) - 127.5) / 127.5
+
+print('input shape: {}, img shape: {}'.format(input_details[0]['shape'], img.shape))
+print(output_details)
+# input_data = decode_img(img)
+
+model.set_tensor(input_details[0]['index'], img)
+model.invoke()
 
 
-	print('{} bodies found.'.format(len(bodies)))
-	for x,y,w,h in bodies:
-			cv.rectangle(image, (x,y), (x+w,y+h), (255,0,0), 2)
-	for x,y,w,h in supbodies:
-			cv.rectangle(supimage, (x,y), (x+w,y+h), (0,255,0), 2)
-	if len(bodies) > 0 and len(bodies) > 0:
-		cv.imshow('no suppression', image)
-		cv.imshow('suppression', supimage)
-		supimage = image.copy()
+output_data =  model.get_tensor(output_details[0]['index'])# o()
+offset_data = model.get_tensor(output_details[1]['index'])
+results = np.squeeze(output_data)
+offsets_results = np.squeeze(offset_data)
+print("output shape: {}".format(output_data.shape))
+np.savez('sample3.npy', [results,offsets_results] , ['heatmaps', 'offsets'])
 
-	cv.waitKey(0)
+
+
+
+
+top_k = results.argsort()[-5:][::-1]
+print(top_k)
+for i in top_k:
+	if floating_model:
+		print('{:08.6f}: {}'.format(float(results[i]), parts.get(i)))
+	else:
+		print('{:08.6f}: {}'.format(float(results[i] / 255.0), parts.get(i)))
