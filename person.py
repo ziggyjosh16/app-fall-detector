@@ -1,4 +1,6 @@
 import numpy as np
+import math
+import cv2 as cv
 
 parts = {
 	0: 'NOSE',
@@ -20,12 +22,18 @@ parts = {
   	16: 'RIGHT_ANKLE'
 }
 
+def sigmoid(x):
+  return 1 / (1 + np.exp(-x))
+def get_keypoints2(heatmap):
+    scores = sigmoid(heatmap)
+    print(scores.shape)
+
+
 class Person():
     def __init__(self, heatmap):
         self.keypoints = self.get_keypoints(heatmap)
         self.pose = self.infer_pose(self.keypoints)
     def get_keypoints(self, data):
-        print(data.shape)
         height, width, num_keypoints = data.shape
         keypoints = []
         for keypoint in range(0, num_keypoints):
@@ -41,7 +49,16 @@ class Person():
             keypoints.append(KeyPoint(keypoint, maxrow, maxcol, maxval))
             # keypoints = [Keypoint(x,y,z) for x,y,z in ]
         return keypoints
-    def infer_pose(self, keypoints):
+    def get_image_coordinates_from_keypoints(self, offsets):
+        height, width, depth = (257,257,3)
+        # [(x,y,confidence)]
+        coords = [{ 'point': k.body_part,
+                    'location': (k.x / (width - 1)*width + offsets[k.y][k.x][k.index],
+                   k.y / (height - 1)*height + offsets[k.y][k.x][k.index]),
+                    'confidence': k.confidence}
+                 for k in self.keypoints]
+        return coords
+    def infer_pose(self, coords):
         return "Unknown"
     def to_string(self):
         return [a.to_string() for a in self.keypoints]
@@ -51,15 +68,21 @@ class KeyPoint():
     def __init__(self, index, x, y, v):
         self.x = x
         self.y = y
+        self.index = index
         self.body_part = parts.get(index)
-        self.confidence = v
+        self.confidence = sigmoid(v)
     def to_string(self):
         return '{}\nlocation:{}\nconfidence:{}\n'.format(self.body_part, (self.x, self.y), self.confidence)
 
 
 
-
-data = np.load('sample3.npy')
-
-person = Person(data)
-[print(a) for a in person.to_string()]
+npz = np.load('sample3.npz')
+data = npz['arr_0']
+offsets = npz['arr_1']
+# print(offsets)
+# person = Person(data)
+# [print(a) for a in person.to_string()]
+# cs = person.get_image_coordinates_from_keypoints(offsets)
+# [print(c) for c in cs]
+print(data.shape, offsets.shape)
+get_keypoints2(data)

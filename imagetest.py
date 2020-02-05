@@ -3,7 +3,6 @@ import numpy as np
 import os
 import tensorflow as tf
 import numpy as np
-from PIL import Image
 
 parts = {
 	0: 'NOSE',
@@ -26,7 +25,10 @@ parts = {
 }
 
 img = cv.imread('photos\standing\\3.jpg')
+print(img.shape)
+# img = tf.reshape(img, [1,257,257,3])
 img = tf.reshape(tf.image.resize(img, [257,257]), [1,257,257,3])
+
 model = tf.lite.Interpreter('models\posenet_mobilenet_v1_100_257x257_multi_kpt_stripped.tflite')
 model.allocate_tensors()
 input_details = model.get_input_details()
@@ -37,8 +39,9 @@ floating_model = input_details[0]['dtype'] == np.float32
 if floating_model:
 	img = (np.float32(img) - 127.5) / 127.5
 
+
 print('input shape: {}, img shape: {}'.format(input_details[0]['shape'], img.shape))
-print(output_details)
+# print(output_details)
 # input_data = decode_img(img)
 
 model.set_tensor(input_details[0]['index'], img)
@@ -50,16 +53,16 @@ offset_data = model.get_tensor(output_details[1]['index'])
 results = np.squeeze(output_data)
 offsets_results = np.squeeze(offset_data)
 print("output shape: {}".format(output_data.shape))
-np.savez('sample3.npy', [results,offsets_results] , ['heatmaps', 'offsets'])
+np.savez('sample3.npz', results, offsets_results)
 
 
 
 
 
-top_k = results.argsort()[-5:][::-1]
-print(top_k)
-for i in top_k:
-	if floating_model:
-		print('{:08.6f}: {}'.format(float(results[i]), parts.get(i)))
-	else:
-		print('{:08.6f}: {}'.format(float(results[i] / 255.0), parts.get(i)))
+# top_k = results.argsort()[-5:][::-1]
+# print(top_k)
+# for i in top_k:
+# 	if floating_model:
+# 		print('{:08.6f}: {}'.format(float(results[i]), parts.get(i)))
+# 	else:
+# 		print('{:08.6f}: {}'.format(float(results[i] / 255.0), parts.get(i)))
