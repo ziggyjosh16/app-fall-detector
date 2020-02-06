@@ -24,11 +24,20 @@ parts = {
 
 def sigmoid(x):
   return 1 / (1 + np.exp(-x))
-def get_keypoints2(heatmap):
-    scores = sigmoid(heatmap)
-    print(scores.shape)
-
-
+def get_keypoints2(heatmaps, offsets, output_stride=32):
+    scores = sigmoid(heatmaps)
+    print('scores shape', scores.shape)
+    num_keypoints = scores.shape[2]
+    heatmap_positions = []
+    offset_vectors = []
+    for ki in range(0, num_keypoints ):
+        x,y = np.unravel_index(np.argmax(scores[:,:,ki]), scores[:,:,ki].shape)
+        offset_vector = (offsets[y,x,ki], offsets[y,x,num_keypoints+ki])
+        heatmap_positions.append((x,y))
+        offset_vectors.append(offset_vector)
+        # print("keypoint index: {}, position:{}".format(ki, position))
+    image_positions = np.add(np.array(heatmap_positions) * output_stride, offset_vectors)
+    print(image_positions)
 class Person():
     def __init__(self, heatmap):
         self.keypoints = self.get_keypoints(heatmap)
@@ -85,4 +94,4 @@ offsets = npz['arr_1']
 # cs = person.get_image_coordinates_from_keypoints(offsets)
 # [print(c) for c in cs]
 print(data.shape, offsets.shape)
-get_keypoints2(data)
+get_keypoints2(data, offsets)

@@ -3,7 +3,7 @@ import numpy as np
 import os
 import tensorflow as tf
 import numpy as np
-
+import json
 parts = {
 	0: 'NOSE',
 	1: 'LEFT_EYE',
@@ -34,6 +34,12 @@ model.allocate_tensors()
 input_details = model.get_input_details()
 output_details = model.get_output_details()
 
+with open('model_details.json', 'w') as outfile:
+	 info = dict(list(enumerate(model.get_tensor_details())))
+	 s = json.dumps(str(info))
+	 outfile.write(s)
+
+exit()
 floating_model = input_details[0]['dtype'] == np.float32
 
 if floating_model:
