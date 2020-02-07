@@ -109,3 +109,4 @@ venv.bak/
 videos/
 photos/
 models/
+.vscode/
