@@ -1,0 +1,1131 @@
+{
+    0: {
+        "name": "MobilenetV1/Conv2d_0/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 0,
+        "shape": array([
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    1: {
+        "name": "MobilenetV1/Conv2d_0/Relu6",
+        "index": 1,
+        "shape": array([
+            1,
+            129,
+            129,
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    2: {
+        "name": "MobilenetV1/Conv2d_0/weights",
+        "index": 2,
+        "shape": array([
+            32,
+            3,
+            3,
+            3
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    3: {
+        "name": "MobilenetV1/Conv2d_10_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 3,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    4: {
+        "name": "MobilenetV1/Conv2d_10_depthwise/Relu6",
+        "index": 4,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    5: {
+        "name": "MobilenetV1/Conv2d_10_depthwise/depthwise_weights",
+        "index": 5,
+        "shape": array([
+            1,
+            3,
+            3,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    6: {
+        "name": "MobilenetV1/Conv2d_10_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 6,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    7: {
+        "name": "MobilenetV1/Conv2d_10_pointwise/Relu6",
+        "index": 7,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    8: {
+        "name": "MobilenetV1/Conv2d_10_pointwise/weights",
+        "index": 8,
+        "shape": array([
+            512,
+            1,
+            1,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    9: {
+        "name": "MobilenetV1/Conv2d_11_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 9,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    10: {
+        "name": "MobilenetV1/Conv2d_11_depthwise/Relu6",
+        "index": 10,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    11: {
+        "name": "MobilenetV1/Conv2d_11_depthwise/depthwise_weights",
+        "index": 11,
+        "shape": array([
+            1,
+            3,
+            3,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    12: {
+        "name": "MobilenetV1/Conv2d_11_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 12,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    13: {
+        "name": "MobilenetV1/Conv2d_11_pointwise/Relu6",
+        "index": 13,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    14: {
+        "name": "MobilenetV1/Conv2d_11_pointwise/weights",
+        "index": 14,
+        "shape": array([
+            512,
+            1,
+            1,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    15: {
+        "name": "MobilenetV1/Conv2d_12_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 15,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    16: {
+        "name": "MobilenetV1/Conv2d_12_depthwise/Relu6",
+        "index": 16,
+        "shape": array([
+            1,
+            9,
+            9,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    17: {
+        "name": "MobilenetV1/Conv2d_12_depthwise/depthwise_weights",
+        "index": 17,
+        "shape": array([
+            1,
+            3,
+            3,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    18: {
+        "name": "MobilenetV1/Conv2d_12_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 18,
+        "shape": array([
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    19: {
+        "name": "MobilenetV1/Conv2d_12_pointwise/Relu6",
+        "index": 19,
+        "shape": array([
+            1,
+            9,
+            9,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    20: {
+        "name": "MobilenetV1/Conv2d_12_pointwise/weights",
+        "index": 20,
+        "shape": array([
+            1024,
+            1,
+            1,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    21: {
+        "name": "MobilenetV1/Conv2d_13_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 21,
+        "shape": array([
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    22: {
+        "name": "MobilenetV1/Conv2d_13_depthwise/Relu6",
+        "index": 22,
+        "shape": array([
+            1,
+            9,
+            9,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    23: {
+        "name": "MobilenetV1/Conv2d_13_depthwise/depthwise_weights",
+        "index": 23,
+        "shape": array([
+            1,
+            3,
+            3,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    24: {
+        "name": "MobilenetV1/Conv2d_13_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 24,
+        "shape": array([
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    25: {
+        "name": "MobilenetV1/Conv2d_13_pointwise/Relu6",
+        "index": 25,
+        "shape": array([
+            1,
+            9,
+            9,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    26: {
+        "name": "MobilenetV1/Conv2d_13_pointwise/weights",
+        "index": 26,
+        "shape": array([
+            1024,
+            1,
+            1,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    27: {
+        "name": "MobilenetV1/Conv2d_1_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 27,
+        "shape": array([
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    28: {
+        "name": "MobilenetV1/Conv2d_1_depthwise/Relu6",
+        "index": 28,
+        "shape": array([
+            1,
+            129,
+            129,
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    29: {
+        "name": "MobilenetV1/Conv2d_1_depthwise/depthwise_weights",
+        "index": 29,
+        "shape": array([
+            1,
+            3,
+            3,
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    30: {
+        "name": "MobilenetV1/Conv2d_1_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 30,
+        "shape": array([
+            64
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    31: {
+        "name": "MobilenetV1/Conv2d_1_pointwise/Relu6",
+        "index": 31,
+        "shape": array([
+            1,
+            129,
+            129,
+            64
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    32: {
+        "name": "MobilenetV1/Conv2d_1_pointwise/weights",
+        "index": 32,
+        "shape": array([
+            64,
+            1,
+            1,
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    33: {
+        "name": "MobilenetV1/Conv2d_2_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 33,
+        "shape": array([
+            64
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    34: {
+        "name": "MobilenetV1/Conv2d_2_depthwise/Relu6",
+        "index": 34,
+        "shape": array([
+            1,
+            65,
+            65,
+            64
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    35: {
+        "name": "MobilenetV1/Conv2d_2_depthwise/depthwise_weights",
+        "index": 35,
+        "shape": array([
+            1,
+            3,
+            3,
+            64
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    36: {
+        "name": "MobilenetV1/Conv2d_2_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 36,
+        "shape": array([
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    37: {
+        "name": "MobilenetV1/Conv2d_2_pointwise/Relu6",
+        "index": 37,
+        "shape": array([
+            1,
+            65,
+            65,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    38: {
+        "name": "MobilenetV1/Conv2d_2_pointwise/weights",
+        "index": 38,
+        "shape": array([
+            128,
+            1,
+            1,
+            64
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    39: {
+        "name": "MobilenetV1/Conv2d_3_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 39,
+        "shape": array([
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    40: {
+        "name": "MobilenetV1/Conv2d_3_depthwise/Relu6",
+        "index": 40,
+        "shape": array([
+            1,
+            65,
+            65,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    41: {
+        "name": "MobilenetV1/Conv2d_3_depthwise/depthwise_weights",
+        "index": 41,
+        "shape": array([
+            1,
+            3,
+            3,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    42: {
+        "name": "MobilenetV1/Conv2d_3_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 42,
+        "shape": array([
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    43: {
+        "name": "MobilenetV1/Conv2d_3_pointwise/Relu6",
+        "index": 43,
+        "shape": array([
+            1,
+            65,
+            65,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    44: {
+        "name": "MobilenetV1/Conv2d_3_pointwise/weights",
+        "index": 44,
+        "shape": array([
+            128,
+            1,
+            1,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    45: {
+        "name": "MobilenetV1/Conv2d_4_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 45,
+        "shape": array([
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    46: {
+        "name": "MobilenetV1/Conv2d_4_depthwise/Relu6",
+        "index": 46,
+        "shape": array([
+            1,
+            33,
+            33,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    47: {
+        "name": "MobilenetV1/Conv2d_4_depthwise/depthwise_weights",
+        "index": 47,
+        "shape": array([
+            1,
+            3,
+            3,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    48: {
+        "name": "MobilenetV1/Conv2d_4_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 48,
+        "shape": array([
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    49: {
+        "name": "MobilenetV1/Conv2d_4_pointwise/Relu6",
+        "index": 49,
+        "shape": array([
+            1,
+            33,
+            33,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    50: {
+        "name": "MobilenetV1/Conv2d_4_pointwise/weights",
+        "index": 50,
+        "shape": array([
+            256,
+            1,
+            1,
+            128
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    51: {
+        "name": "MobilenetV1/Conv2d_5_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 51,
+        "shape": array([
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    52: {
+        "name": "MobilenetV1/Conv2d_5_depthwise/Relu6",
+        "index": 52,
+        "shape": array([
+            1,
+            33,
+            33,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    53: {
+        "name": "MobilenetV1/Conv2d_5_depthwise/depthwise_weights",
+        "index": 53,
+        "shape": array([
+            1,
+            3,
+            3,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    54: {
+        "name": "MobilenetV1/Conv2d_5_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 54,
+        "shape": array([
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    55: {
+        "name": "MobilenetV1/Conv2d_5_pointwise/Relu6",
+        "index": 55,
+        "shape": array([
+            1,
+            33,
+            33,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    56: {
+        "name": "MobilenetV1/Conv2d_5_pointwise/weights",
+        "index": 56,
+        "shape": array([
+            256,
+            1,
+            1,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    57: {
+        "name": "MobilenetV1/Conv2d_6_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 57,
+        "shape": array([
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    58: {
+        "name": "MobilenetV1/Conv2d_6_depthwise/Relu6",
+        "index": 58,
+        "shape": array([
+            1,
+            17,
+            17,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    59: {
+        "name": "MobilenetV1/Conv2d_6_depthwise/depthwise_weights",
+        "index": 59,
+        "shape": array([
+            1,
+            3,
+            3,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    60: {
+        "name": "MobilenetV1/Conv2d_6_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 60,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    61: {
+        "name": "MobilenetV1/Conv2d_6_pointwise/Relu6",
+        "index": 61,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    62: {
+        "name": "MobilenetV1/Conv2d_6_pointwise/weights",
+        "index": 62,
+        "shape": array([
+            512,
+            1,
+            1,
+            256
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    63: {
+        "name": "MobilenetV1/Conv2d_7_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 63,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    64: {
+        "name": "MobilenetV1/Conv2d_7_depthwise/Relu6",
+        "index": 64,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    65: {
+        "name": "MobilenetV1/Conv2d_7_depthwise/depthwise_weights",
+        "index": 65,
+        "shape": array([
+            1,
+            3,
+            3,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    66: {
+        "name": "MobilenetV1/Conv2d_7_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 66,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    67: {
+        "name": "MobilenetV1/Conv2d_7_pointwise/Relu6",
+        "index": 67,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    68: {
+        "name": "MobilenetV1/Conv2d_7_pointwise/weights",
+        "index": 68,
+        "shape": array([
+            512,
+            1,
+            1,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    69: {
+        "name": "MobilenetV1/Conv2d_8_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 69,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    70: {
+        "name": "MobilenetV1/Conv2d_8_depthwise/Relu6",
+        "index": 70,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    71: {
+        "name": "MobilenetV1/Conv2d_8_depthwise/depthwise_weights",
+        "index": 71,
+        "shape": array([
+            1,
+            3,
+            3,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    72: {
+        "name": "MobilenetV1/Conv2d_8_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 72,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    73: {
+        "name": "MobilenetV1/Conv2d_8_pointwise/Relu6",
+        "index": 73,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    74: {
+        "name": "MobilenetV1/Conv2d_8_pointwise/weights",
+        "index": 74,
+        "shape": array([
+            512,
+            1,
+            1,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    75: {
+        "name": "MobilenetV1/Conv2d_9_depthwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 75,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    76: {
+        "name": "MobilenetV1/Conv2d_9_depthwise/Relu6",
+        "index": 76,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    77: {
+        "name": "MobilenetV1/Conv2d_9_depthwise/depthwise_weights",
+        "index": 77,
+        "shape": array([
+            1,
+            3,
+            3,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    78: {
+        "name": "MobilenetV1/Conv2d_9_pointwise/BatchNorm/batchnorm_1/add_1/conv_bias",
+        "index": 78,
+        "shape": array([
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    79: {
+        "name": "MobilenetV1/Conv2d_9_pointwise/Relu6",
+        "index": 79,
+        "shape": array([
+            1,
+            17,
+            17,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    80: {
+        "name": "MobilenetV1/Conv2d_9_pointwise/weights",
+        "index": 80,
+        "shape": array([
+            512,
+            1,
+            1,
+            512
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    81: {
+        "name": "MobilenetV1/displacement_bwd_2/BiasAdd",
+        "index": 81,
+        "shape": array([
+            1,
+            9,
+            9,
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    82: {
+        "name": "MobilenetV1/displacement_bwd_2/BiasAdd/conv_bias",
+        "index": 82,
+        "shape": array([
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    83: {
+        "name": "MobilenetV1/displacement_bwd_2/weights",
+        "index": 83,
+        "shape": array([
+            32,
+            1,
+            1,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    84: {
+        "name": "MobilenetV1/displacement_fwd_2/BiasAdd",
+        "index": 84,
+        "shape": array([
+            1,
+            9,
+            9,
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    85: {
+        "name": "MobilenetV1/displacement_fwd_2/BiasAdd/conv_bias",
+        "index": 85,
+        "shape": array([
+            32
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    86: {
+        "name": "MobilenetV1/displacement_fwd_2/weights",
+        "index": 86,
+        "shape": array([
+            32,
+            1,
+            1,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    87: {
+        "name": "MobilenetV1/heatmap_2/BiasAdd",
+        "index": 87,
+        "shape": array([
+            1,
+            9,
+            9,
+            17
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    88: {
+        "name": "MobilenetV1/heatmap_2/BiasAdd/conv_bias",
+        "index": 88,
+        "shape": array([
+            17
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    89: {
+        "name": "MobilenetV1/heatmap_2/weights",
+        "index": 89,
+        "shape": array([
+            17,
+            1,
+            1,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    90: {
+        "name": "MobilenetV1/offset_2/BiasAdd",
+        "index": 90,
+        "shape": array([
+            1,
+            9,
+            9,
+            34
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    91: {
+        "name": "MobilenetV1/offset_2/BiasAdd/conv_bias",
+        "index": 91,
+        "shape": array([
+            34
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    92: {
+        "name": "MobilenetV1/offset_2/weights",
+        "index": 92,
+        "shape": array([
+            34,
+            1,
+            1,
+            1024
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    },
+    93: {
+        "name": "sub_2",
+        "index": 93,
+        "shape": array([
+            1,
+            257,
+            257,
+            3
+        ]),
+        "dtype": <class "numpy.float32">,
+        "quantization": (0.0,
+        0)
+    }
+}

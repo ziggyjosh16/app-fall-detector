@@ -105,5 +105,8 @@ venv.bak/
 
 #other
 *.xml
+*.npy
 videos/
-group_photo/
+photos/
+models/
+.vscode/
