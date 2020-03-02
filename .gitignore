@@ -108,5 +108,6 @@ venv.bak/
 *.npy
 videos/
 photos/
+group_photo/
 models/
 .vscode/
